@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+PYTHON="/Users/eli/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+
+if [[ "${1:-}" == "-v" || "${1:-}" == "--version" ]]; then
+  echo "pdftotext compatible wrapper using pdfminer.six"
+  exit 0
+fi
+
+"$PYTHON" - "$@" <<'PY'
+import argparse
+import pathlib
+import sys
+
+from pdfminer.high_level import extract_text
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        prog="pdftotext",
+        description="Minimal pdftotext-compatible wrapper backed by pdfminer.six.",
+    )
+    parser.add_argument("-layout", action="store_true", help="Accepted for compatibility.")
+    parser.add_argument("-enc", metavar="ENCODING", default="utf-8")
+    parser.add_argument("pdf")
+    parser.add_argument("text", nargs="?")
+    args = parser.parse_args()
+
+    pdf_path = pathlib.Path(args.pdf)
+    text = extract_text(str(pdf_path))
+
+    if args.text and args.text != "-":
+        pathlib.Path(args.text).write_text(text, encoding=args.enc)
+    else:
+        sys.stdout.write(text)
+
+    return 0
+
+
+raise SystemExit(main())
+PY
