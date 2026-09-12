@@ -1,5 +1,6 @@
 (function () {
-  const content = window.PORTFOLIO_CONTENT;
+ const content = window.PORTFOLIO_CONTENT;
+  if (window.RESUME_CONTENT) content.home.resume = window.RESUME_CONTENT;
   const app = document.getElementById("app");
   const currentPage = document.body.dataset.page || "home";
   const languageStorageKey = "eli-portfolio-language";
@@ -299,6 +300,8 @@
               <h3>${text(item.company || item.school || item.label || item.title)}</h3>
               ${item.role || item.degree ? `<p class="resume-role">${text(item.role || item.degree)}</p>` : ""}
               ${item.text || item.value ? `<p>${text(item.text || item.value)}</p>` : ""}
+             ${item.details ? `<ul class="resume-details">${item.details.map((detail) => `<li>${text(detail)}</li>`).join("")}</ul>` : ""}
+              ${!item.period && !item.label && !item.company && !item.school && !item.title && !item.text && !item.value && !item.details ? `<p>${text(item)}</p>` : ""}
             </div>
           </article>
         `).join("")}</div>` : ""}
@@ -323,12 +326,15 @@
           </div>
           <div class="hero-visual"><img class="hero-image" src="${content.home.heroImage}" alt="${text(content.profile.name)}" /></div>
         </section>
-        ${renderResumeBlock(resume.researchDirection, "resume-feature")}
-        ${renderResumeBlock(resume.work)}
-        ${renderResumeBlock(resume.education)}
-        ${renderResumeBlock(resume.research)}
-        ${renderResumeBlock(resume.skills)}
-        ${renderResumeBlock(resume.honors)}
+       ${renderResumeBlock(resume.researchDirection, "resume-feature")}
+        ${renderResumeBlock(resume.currentWork, "resume-feature")}
+       ${renderResumeBlock(resume.work)}
+       ${renderResumeBlock(resume.education)}
+       ${renderResumeBlock(resume.research)}
+       ${renderResumeBlock(resume.skills)}
+        ${renderResumeBlock(resume.interests)}
+       ${renderResumeBlock(resume.honors)}
+        ${renderResumeBlock(resume.summary)}
       </main>
     `;
   }

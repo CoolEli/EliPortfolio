@@ -798,6 +798,19 @@ a.button {
   font-size: 0.88rem;
 }
 
+.resume-details {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.resume-details li::marker {
+  color: var(--text);
+}
+
 .resume-contact .contact-list {
   max-width: 760px;
 }
