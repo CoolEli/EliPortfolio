@@ -103,15 +103,7 @@
   }
 
   function renderFooter() {
-    return `
-      <footer class="site-footer">
-        <p>${text(content.footer.statement)}</p>
-        <div class="footer-links">
-          <a href="${content.profile.github}" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="mailto:${content.profile.email}">${content.profile.email}</a>
-        </div>
-      </footer>
-    `;
+    return `<footer class="site-footer" aria-hidden="true"></footer>`;
   }
 
   function renderCollectionCards(items) {
