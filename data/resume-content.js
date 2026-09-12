@@ -13,6 +13,26 @@ window.RESUME_CONTENT = {
       zh: "扩展现实（XR）技术在空间体验与数字媒介交互中的应用。关注虚拟现实与混合现实技术在人机交互与空间体验设计中的应用，通过沉浸式可视化与数据分析方法探索用户感知与设计参数之间的关系，并结合人工智能工具辅助设计分析与研究实现。",
     },
   },
+  personal: {
+    title: { en: "Personal Information", zh: "个人基本信息" },
+    items: [
+      { label: { en: "Name", zh: "姓名" }, value: { en: "Zeng Hanlei", zh: "曾韩擂" } },
+      { label: { en: "Date of Birth", zh: "出生日期" }, value: { en: "August 7, 1998", zh: "1998 年 08 月 07 日" } },
+      { label: { en: "Phone", zh: "联系电话" }, value: { en: "15157722390", zh: "15157722390" } },
+      { label: { en: "Email", zh: "电子邮箱" }, value: { en: "946227177@qq.com", zh: "946227177@qq.com" } },
+      { label: { en: "WeChat ID", zh: "微信号 / ID" }, value: { en: "ELIZENG1998", zh: "ELIZENG1998" } },
+    ],
+  },
+  researchExperience: {
+    title: { en: "Research Experience", zh: "研究经验" },
+    items: [
+      { en: "During my master's study, I focused on applications of mixed reality technology in product design.", zh: "硕士阶段主要围绕混合现实技术在产品设计中的应用开展研究。" },
+      { en: "Using recreational vehicle interior customization as the research object, I applied grounded theory to analyze user customization needs and built a user-needs model for recreational vehicle interiors.", zh: "以房车内饰定制为研究对象，基于扎根理论对用户定制需求进行分析，并构建房车内饰定制的用户需求模型。" },
+      { en: "I designed recreational vehicle interior components with C4D and Rhino, then developed a HoloLens 2 recreational vehicle interior customization prototype with C# on Unity. With the MRTK plugin, the system supported spatial presentation and interactive customization in a mixed-reality environment.", zh: "利用 C4D、Rhino 等建模软件完成房车内饰组件设计，并基于 Unity 平台使用 C# 语言开发基于 HoloLens 2 的房车内饰定制原型系统，结合 MRTK 插件实现虚实融合环境中的空间展示与交互定制功能。" },
+      { en: "The research improved recreational vehicle interior customization efficiency to some extent and reduced enterprise inventory risk for components.", zh: "该研究在一定程度上提升了房车内饰定制效率，并减少了企业在组件库存方面的风险。" },
+      { en: "I systematically learned and applied qualitative and quantitative methods including grounded theory, user interviews, experimental design, and questionnaire evaluation; independently completed the design and development of an XR interaction prototype system; and developed a research path centered on user research, using immersive technology as a tool and spatial experience as the core.", zh: "在研究过程中，系统学习并应用了定性与定量相结合的研究方法，包括扎根理论、用户访谈、实验设计与问卷评价等；独立完成 XR 交互原型系统的设计与开发，逐步形成了以用户研究为基础、沉浸式技术为工具、空间体验为核心的研究路径。" },
+    ],
+  },
   education: {
     title: { en: "Education", zh: "教育经历" },
     items: [

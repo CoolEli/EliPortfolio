@@ -327,7 +327,9 @@
           <div class="hero-visual"><img class="hero-image" src="${content.home.heroImage}" alt="${text(content.profile.name)}" /></div>
         </section>
        ${renderResumeBlock(resume.researchDirection, "resume-feature")}
-        ${renderResumeBlock(resume.currentWork, "resume-feature")}
+       ${renderResumeBlock(resume.currentWork, "resume-feature")}
+        ${renderResumeBlock(resume.personal)}
+        ${renderResumeBlock(resume.researchExperience)}
        ${renderResumeBlock(resume.work)}
        ${renderResumeBlock(resume.education)}
        ${renderResumeBlock(resume.research)}
