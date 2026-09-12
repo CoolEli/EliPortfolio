@@ -9,8 +9,7 @@
   const collectionMap = {
     ux: content.ux,
     "product-design": content.productDesign,
-    "graduate-research": content.graduateResearch,
-    "other-projects": content.otherProjects,
+    "virtual-reality": content.virtualReality,
   };
 
   function text(value) {
@@ -88,7 +87,7 @@
             </span>
           </button>
           <a class="brand" href="index.html">
-            <span class="brand-name">${content.profile.name}</span>
+            <span class="brand-name">${text(content.profile.name)}</span>
             <span class="brand-role">${text(content.profile.role)}</span>
           </a>
         </div>
@@ -104,19 +103,12 @@
   }
 
   function renderFooter() {
-    const resumeLink = content.profile.resume
-      ? `<a href="${content.profile.resume}" target="_blank" rel="noreferrer">${
-          currentLanguage === "en" ? "Resume" : "简历"
-        }</a>`
-      : "";
-
     return `
       <footer class="site-footer">
         <p>${text(content.footer.statement)}</p>
         <div class="footer-links">
           <a href="${content.profile.github}" target="_blank" rel="noreferrer">GitHub</a>
           <a href="mailto:${content.profile.email}">${content.profile.email}</a>
-          ${resumeLink}
         </div>
       </footer>
     `;
@@ -217,7 +209,7 @@
         <section class="hero">
           <div class="hero-copy">
             <p class="eyebrow">${text(content.home.heroEyebrow)}</p>
-            <h1>${content.profile.name}</h1>
+            <h1>${text(content.profile.name)}</h1>
             <h2>${text(content.profile.role)}</h2>
             <p class="hero-text">${text(content.profile.tagline)} ${text(content.profile.intro)}</p>
             <div class="hero-actions">
@@ -226,7 +218,7 @@
             </div>
           </div>
           <div class="hero-visual">
-            <img class="hero-image" src="${content.home.heroImage}" alt="${content.profile.name}" />
+            <img class="hero-image" src="${content.home.heroImage}" alt="${text(content.profile.name)}" />
             <div class="hero-overlay-word">${currentLanguage === "en" ? "Portfolio" : "作品集"}</div>
           </div>
         </section>
@@ -653,32 +645,10 @@
   }
 
   function renderPage() {
-    const pages = {
-      home: renderHome,
-      experiments: renderExperiments,
-      ux: () => renderCollectionPage("ux", content.ux, currentLanguage === "en" ? "Interaction" : "交互"),
-      "product-design": () =>
-        renderCollectionPage("product-design", content.productDesign, currentLanguage === "en" ? "Product" : "产品"),
-      "graduate-research": () =>
-        renderCollectionPage(
-          "graduate-research",
-          content.graduateResearch,
-          currentLanguage === "en" ? "Research" : "研究"
-        ),
-      "other-projects": () =>
-        renderCollectionPage("other-projects", content.otherProjects, currentLanguage === "en" ? "Selection" : "精选"),
-      projects: renderProjects,
-      archive: renderArchive,
-      contact: renderContact,
-      about: renderAbout,
-      "project-detail": renderProjectDetail,
-    };
-
-    const renderer = pages[currentPage] || renderHome;
     app.innerHTML = `
       <div class="site-shell">
         ${renderHeader()}
-        ${renderer()}
+        <main aria-label="${currentLanguage === "en" ? "Empty page" : "空白页面"}"></main>
         ${renderFooter()}
       </div>
     `;

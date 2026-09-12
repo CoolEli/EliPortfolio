@@ -1,6 +1,6 @@
 window.PORTFOLIO_CONTENT = {
   profile: {
-    name: "Eli",
+    name: { en: "ELI", zh: "曾韩擂" },
     role: {
       en: "UX, Product, and Interaction Designer",
       zh: "UX、产品与交互设计师",
@@ -20,8 +20,6 @@ window.PORTFOLIO_CONTENT = {
   },
   navigation: [
     { href: "index.html", key: "home", label: { en: "Home", zh: "首页" } },
-    { href: "projects.html", key: "projects", label: { en: "Projects", zh: "项目" } },
-    { href: "experiments.html", key: "experiments", label: { en: "Experiments", zh: "实验" } },
     { href: "ux.html", key: "ux", label: { en: "UX", zh: "UX" } },
     {
       href: "product-design.html",
@@ -29,16 +27,10 @@ window.PORTFOLIO_CONTENT = {
       label: { en: "Product Design", zh: "产品设计" },
     },
     {
-      href: "graduate-research.html",
-      key: "graduate-research",
-      label: { en: "Graduate Research", zh: "研究生研究" },
+      href: "virtual-reality.html",
+      key: "virtual-reality",
+      label: { en: "Virtual Reality", zh: "虚拟现实" },
     },
-    {
-      href: "other-projects.html",
-      key: "other-projects",
-      label: { en: "Other Projects", zh: "其他项目" },
-    },
-    { href: "about.html", key: "about", label: { en: "About", zh: "关于" } },
     { href: "contact.html", key: "contact", label: { en: "Contact", zh: "联系" } },
   ],
   home: {
