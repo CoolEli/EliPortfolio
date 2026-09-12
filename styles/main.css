@@ -729,6 +729,86 @@ a.button {
   color: var(--muted);
 }
 
+.resume-home {
+  padding-bottom: 48px;
+}
+
+.resume-hero {
+  min-height: min(720px, calc(100vh - 96px));
+}
+
+.resume-fact {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-feature {
+  padding: 72px 0;
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+}
+
+.resume-lead {
+  max-width: 900px;
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.5rem, 3vw, 2.6rem);
+  line-height: 1.25;
+}
+
+.resume-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.resume-item {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.24fr) 1fr;
+  gap: 28px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-period {
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.resume-item h3 {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.resume-item p {
+  margin: 10px 0 0;
+  max-width: 72ch;
+}
+
+.resume-item .resume-role {
+  margin-top: 6px;
+  color: var(--text);
+  font-size: 0.88rem;
+}
+
+.resume-contact .contact-list {
+  max-width: 760px;
+}
+
+@media (max-width: 760px) {
+  .resume-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
 @media (max-width: 1100px) {
   .hero,
   .capability-grid,

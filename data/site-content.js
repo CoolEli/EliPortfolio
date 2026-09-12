@@ -2,19 +2,22 @@ window.PORTFOLIO_CONTENT = {
   profile: {
     name: { en: "ELI", zh: "曾韩擂" },
     role: {
-      en: "UX, Product, and Interaction Designer",
-      zh: "UX、产品与交互设计师",
+      en: "XR Researcher, Product Manager, and Digital Design Educator",
+      zh: "XR 研究者、硬件产品经理、数字设计教育者",
     },
     tagline: {
       en: "Designing interaction systems, product experiences, and research-driven interfaces.",
       zh: "专注于交互系统、产品体验与研究驱动的界面设计。",
     },
     intro: {
-      en: "I focus on UX, product design, and interactive experiences, while also extending into experiments, graduate research, and selected visual work.",
-      zh: "我主要聚焦 UX、产品设计与交互体验，同时延伸到实验项目、研究生阶段的研究成果以及精选视觉作品。",
+      en: "I work across XR research, spatial experience, digital media interaction, and hardware product development.",
+      zh: "我专注于 XR 研究、空间体验、数字媒介交互与硬件产品开发。",
     },
-    location: "Shanghai / Remote",
-    email: "hello@yourdomain.com",
+    location: { en: "Quanzhou, China", zh: "中国泉州" },
+    birthDate: "1998-08-07",
+    phone: "15157722390",
+    email: "946227177@qq.com",
+    wechat: "ELIZENG1998",
     github: "https://github.com/CoolEli/EliPortfolio",
     resume: "",
   },
@@ -70,6 +73,68 @@ window.PORTFOLIO_CONTENT = {
     manifesto: {
       en: "I design interaction-led experiences with a focus on UX clarity, product systems, and research-driven thinking.",
       zh: "我以交互为核心设计体验，关注 UX 清晰度、产品系统，以及研究驱动的设计思考。",
+    },
+    resume: {
+      researchDirection: {
+        title: { en: "Research Direction", zh: "研究方向" },
+        text: {
+          en: "Applications of extended reality (XR) in spatial experience and digital media interaction. I explore the relationship between user perception and design parameters through immersive visualization, data analysis, and AI-assisted research.",
+          zh: "扩展现实（XR）技术在空间体验与数字媒介交互中的应用。通过沉浸式可视化、数据分析与 AI 辅助研究，探索用户感知与设计参数之间的关系。",
+        },
+      },
+      work: {
+        title: { en: "Experience", zh: "工作经历" },
+        items: [
+          {
+            period: "2025.11 - Present",
+            company: { en: "Quanzhou Huaguang Vocational College", zh: "泉州华光职业学院" },
+            role: { en: "Director, Digital Intangible Cultural Heritage Design and Production", zh: "数字非遗设计与制作教研室主任" },
+            text: { en: "Teach 3D character design, digital sculpting, graphic fundamentals, and digital creative product design through project-based practice.", zh: "承担三维角色设计、数字雕刻与绘画、图形绘制基础、数字创意产品设计等课程教学，以项目式教学培养数字内容创作与交互创意能力。" },
+          },
+          {
+            period: "2024.10 - 2025.10",
+            company: { en: "Ledvance", zh: "Ledvance" },
+            role: { en: "Hardware Product Manager", zh: "硬件产品经理" },
+            text: { en: "Led 9 lighting product lines and nearly 100 SKUs, generating approximately $8M in sales; evaluated lighting solutions for international projects including Zayed Airport.", zh: "主导 9 个照明产品系列、近 100 个 SKU 的开发与上市，累计销售额约 800 万美元；参与包括 Zayed Airport 在内的国际工程项目照明方案评估。" },
+          },
+          {
+            period: "2023.07 - 2024.07",
+            company: { en: "Leedarson", zh: "立达信" },
+            role: { en: "Hardware Product Manager", zh: "硬件产品经理" },
+            text: { en: "Led research and full lifecycle development for North American and European lighting products; products reached the Amazon category top five with over $30M in sales.", zh: "负责北美与欧洲市场的用户研究及产品全生命周期开发；产品进入亚马逊品类销量前五，累计销售额超过 3000 万美元。" },
+          },
+          {
+            period: "2022.05 - 2022.12",
+            company: { en: "TCL", zh: "TCL" },
+            role: { en: "Smart Home Product Manager Intern", zh: "智能家居产品经理（实习）" },
+            text: { en: "Researched smart-home scenarios, produced 50+ interaction prototypes, and helped build connected product combinations for sleep, viewing, and air purification.", zh: "开展智能家居场景研究，输出 50+ 交互原型图与流程图，参与睡眠、观影与空气净化场景的生态产品组合设计。" },
+          },
+        ],
+      },
+      education: {
+        title: { en: "Education", zh: "教育经历" },
+        items: [
+          { period: "2020 - 2023", school: { en: "Jiangsu University", zh: "江苏大学" }, degree: { en: "M.A. Digital Art Design", zh: "数字化艺术设计 硕士" }, text: { en: "Research focus: virtual reality and product design. Thesis: Mixed-reality-based recreational vehicle interior customization system.", zh: "研究方向：虚拟现实与产品设计。硕士论文：基于混合现实的房车内饰定制系统设计研究。考研分数 402，初试复试第一。" } },
+          { period: "2016 - 2020", school: { en: "Hunan University of Technology University of Science and Technology", zh: "湖南工业大学科技学院" }, degree: { en: "B.A. Product Design", zh: "产品设计 学士" }, text: { en: "Coursework included product systems, design psychology, ergonomics, and product semantics.", zh: "主修产品系统设计、设计心理学、人机工程学与产品语意设计；英语六级、三好学生、三等奖学金。" } },
+        ],
+      },
+      research: {
+        title: { en: "Research & Outputs", zh: "科研成果" },
+        items: [
+          { label: { en: "Publications", zh: "学术论文" }, value: { en: "3 papers, including SHS Web of Conferences (2022), Technical Gazette (2025), and master's thesis (2023).", zh: "3 篇论文，包括 SHS Web of Conferences（2022）、Technical Gazette（2025）及硕士论文（2023）。" } },
+          { label: { en: "Patent", zh: "发明专利" }, value: { en: "1 authorized invention patent: mixed-reality recreational vehicle interior customization method and system.", zh: "1 项授权发明专利：一种基于混合现实技术的房车内饰定制方法及系统。" } },
+          { label: { en: "Software Copyright", zh: "软件著作权" }, value: { en: "MR Recreational Vehicle Interior Personalization System (2022SR0889245).", zh: "MR 房车内饰个性化定制系统（2022SR0889245）。" } },
+          { label: { en: "Research Projects", zh: "科研课题" }, value: { en: "Principal investigator of a Fujian provincial project on VR lighting design collaboration; participant in multiple MR, vehicle design, and healthcare projects.", zh: "主持福建省中青年教师教育科研项目“基于虚拟现实技术的照明设计协同设计”，参与混合现实改装车、商旅车造型、高尔夫球车造型及跨区域医疗系统等项目。" } },
+        ],
+      },
+      skills: {
+        title: { en: "Tools & Methods", zh: "工具与方法" },
+        text: { en: "Unity, C#, Hololens 2, Rhino, C4D, Maya, ZBrush, Figma, Photoshop, Illustrator, Office; grounded theory, user interviews, usability testing, experiment design, questionnaires, PCA, and PLSR.", zh: "Unity、C#、Hololens 2、Rhino、C4D、Maya、ZBrush、Figma、Photoshop、Illustrator、Office；扎根理论、用户访谈、可用性测试、实验设计、问卷评价、PCA 与 PLSR。" },
+      },
+      honors: {
+        title: { en: "Selected Honors", zh: "代表性荣誉" },
+        text: { en: "Bauhaus International Design Competition Silver Award; National College Art & Design Competition Second Prize; Huacan Award Third Prize; multiple provincial, municipal, and university design awards.", zh: "第七届包豪斯国际设计大赛银奖；第四届国青杯全国高校艺术设计大赛二等奖；第八届两岸新锐设计竞赛华灿奖三等奖；另获多项省、市、校级设计奖项。" },
+      },
     },
     tracks: [
       {
@@ -685,14 +750,15 @@ window.PORTFOLIO_CONTENT = {
     ],
     contactTitle: { en: "Contact", zh: "联系" },
     contactIntro: {
-      en: "I am open to design roles, collaborations, and selected freelance opportunities.",
-      zh: "我对设计岗位、合作项目与合适的自由委托机会保持开放。",
+      en: "For research collaboration, product development, teaching, and design projects.",
+      zh: "欢迎联系我开展科研合作、产品开发、教学与设计项目。",
     },
     contactMethods: [
-      { label: "Email", value: "hello@yourdomain.com", href: "mailto:hello@yourdomain.com" },
+      { label: "Phone / 电话", value: "15157722390", href: "tel:15157722390" },
+      { label: "Email / 邮箱", value: "946227177@qq.com", href: "mailto:946227177@qq.com" },
+      { label: "WeChat / 微信", value: "ELIZENG1998", href: "" },
       { label: "GitHub", value: "CoolEli/EliPortfolio", href: "https://github.com/CoolEli/EliPortfolio" },
-      { label: "Location", value: "Shanghai / Remote" },
-      { label: "Resume", value: "Available on request", href: "" },
+      { label: "Location / 所在地", value: "泉州，中国" },
     ],
     closing: {
       en: "Feel free to reach out for projects, opportunities, or simply to say hello.",

@@ -287,6 +287,74 @@
     `;
   }
 
+  function renderResumeBlock(block, className = "resume-block") {
+    return `
+      <section class="section ${className}">
+        <div class="section-heading"><h2>${text(block.title)}</h2></div>
+        ${block.text ? `<p class="resume-lead">${text(block.text)}</p>` : ""}
+        ${block.items ? `<div class="resume-list">${block.items.map((item) => `
+          <article class="resume-item">
+            <div class="resume-period">${item.period || item.label || ""}</div>
+            <div>
+              <h3>${text(item.company || item.school || item.label || item.title)}</h3>
+              ${item.role || item.degree ? `<p class="resume-role">${text(item.role || item.degree)}</p>` : ""}
+              ${item.text || item.value ? `<p>${text(item.text || item.value)}</p>` : ""}
+            </div>
+          </article>
+        `).join("")}</div>` : ""}
+      </section>
+    `;
+  }
+
+  function renderResumeHome() {
+    const resume = content.home.resume;
+    return `
+      <main class="resume-home">
+        <section class="hero resume-hero">
+          <div class="hero-copy">
+            <p class="eyebrow">${text(content.home.heroEyebrow)}</p>
+            <h1>${text(content.profile.name)}</h1>
+            <h2>${text(content.profile.role)}</h2>
+            <p class="hero-text">${text(content.profile.intro)}</p>
+            <div class="hero-actions">
+              <a class="button primary" href="${pageLink("contact")}">${currentLanguage === "en" ? "Contact" : "联系"}</a>
+              <span class="resume-fact">${text(content.profile.location)}</span>
+            </div>
+          </div>
+          <div class="hero-visual"><img class="hero-image" src="${content.home.heroImage}" alt="${text(content.profile.name)}" /></div>
+        </section>
+        ${renderResumeBlock(resume.researchDirection, "resume-feature")}
+        ${renderResumeBlock(resume.work)}
+        ${renderResumeBlock(resume.education)}
+        ${renderResumeBlock(resume.research)}
+        ${renderResumeBlock(resume.skills)}
+        ${renderResumeBlock(resume.honors)}
+      </main>
+    `;
+  }
+
+  function renderResumeContact() {
+    return `
+      <main class="inner-page resume-contact">
+        <section class="page-intro">
+          <p class="eyebrow">${currentLanguage === "en" ? "Contact" : "联系"}</p>
+          <h1>${text(content.about.contactTitle)}</h1>
+          <p>${text(content.about.contactIntro)}</p>
+        </section>
+        <section class="section">
+          <div class="contact-list">
+            ${content.about.contactMethods.map((method) => {
+              const value = method.href
+                ? `<a href="${method.href}" ${method.href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : ""}>${method.value}</a>`
+                : `<span>${method.value}</span>`;
+              return `<div class="contact-item"><span>${method.label}</span>${value}</div>`;
+            }).join("")}
+          </div>
+        </section>
+      </main>
+    `;
+  }
+
   function renderProjects() {
     const items = allProjectItems();
     return `
@@ -637,10 +705,15 @@
   }
 
   function renderPage() {
+    const pageContent = currentPage === "home"
+      ? renderResumeHome()
+      : currentPage === "contact"
+        ? renderResumeContact()
+        : `<main aria-label="${currentLanguage === "en" ? "Empty page" : "空白页面"}"></main>`;
     app.innerHTML = `
       <div class="site-shell">
         ${renderHeader()}
-        <main aria-label="${currentLanguage === "en" ? "Empty page" : "空白页面"}"></main>
+        ${pageContent}
         ${renderFooter()}
       </div>
     `;
